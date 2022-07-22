@@ -2,7 +2,7 @@
 - Using pycom board.
 - FIPY and PYSCAN.
 - Connect to Wifi to get time setting.
-- Detecting NFC and available cards.
+- Detect NFC and available cards.
 - Print acceleration.
 - Print roll and pitch.
 - Print lumen and lux. 
