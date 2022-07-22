@@ -3,6 +3,7 @@
 - FIPY and PYSCAN.
 - Connect to Wifi to get time setting.
 - Detect NFC and available cards.
+- Print battery voltage.
 - Print acceleration.
 - Print roll and pitch.
 - Print lumen and lux. 
