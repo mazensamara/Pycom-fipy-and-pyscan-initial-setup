@@ -33,7 +33,7 @@ RGB_BLUE = (RGB_BRIGHTNESS)
 
 # Connect to wifi to get time
 wlan = WLAN(mode=WLAN.STA)
-wlan.connect(ssid='PI', auth=(WLAN.WPA2, 'PI123456'))
+wlan.connect(ssid='YOUR SSID', auth=(WLAN.WPA2, 'YOUR PASSWORD'))
 while not wlan.isconnected():
     machine.idle()
 time.sleep(1)
@@ -76,6 +76,7 @@ lis2hh12 = LIS2HH12() # 3-Axis Accelerometer
 nfc.mfrc630_cmd_init()
 
 while True:
+    # Read the values from the sensors
     print('\nScanning for cards')
     # Send REQA for ISO14443A card type
     atqa = nfc.mfrc630_iso14443a_WUPA_REQA(nfc.MFRC630_ISO14443_CMD_REQA)
@@ -129,7 +130,8 @@ while True:
     time.sleep(2)
     # Re-Initialise the MFRC630 with settings as these got wiped during reset
     nfc.mfrc630_cmd_init()
-
+    
+    # Read the values from the sensors
     acceleration = lis2hh12.acceleration()
     acceleration_x = lis2hh12.acceleration_x()
     acceleration_y = lis2hh12.acceleration_y()
